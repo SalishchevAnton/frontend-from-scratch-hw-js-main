@@ -25,7 +25,6 @@ function includesElement(array, element) {
     return result
 }
 
-export {includesElement}
 
 let value = includesElement(array, 7);
 console.log(value)

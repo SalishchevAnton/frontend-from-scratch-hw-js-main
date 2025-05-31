@@ -16,8 +16,15 @@
 */
 const array = [1, 2, 3, 4, 5, 3, 2, 8];
 
-
-import {includesElement} from './01.js';
+function includesElement(array, element) {
+    let result = false
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === element) {
+            result = true
+        }
+    }
+    return result
+}
 
 function findUniqueElements(array) {
     const result = [];
