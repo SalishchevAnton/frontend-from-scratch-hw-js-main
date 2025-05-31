@@ -18,7 +18,7 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 */
 
 const array1 = [1, 2, 3, 4, 5];
-const array2 = [4, 5, 6, 7, 8, 9, 10];
+const array2 = [5, 6, 7];
 
 function includesElement(array, element) {
     let result = false
@@ -33,9 +33,8 @@ function includesElement(array, element) {
 function findCommonElements(array1, array2) {
     const newArray = [];
     for (let i = 0; i < array1.length; i++) {
-        const element = array1[i];
-        if (includesElement(array2, element) === true) {
-            newArray.push(element);
+        if (includesElement(array2, array1[i]) === true) {
+            newArray.push(array1[i]);
         }
     }
     return newArray;
